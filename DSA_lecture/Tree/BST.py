@@ -66,6 +66,12 @@ class BST:
             copyRoot = copyRoot.left
         print("\n Min value - ",copyRoot.data)
 
+    def maxValue(self):
+            copyRoot = self.root
+    
+            while copyRoot.right:
+                copyRoot = copyRoot.right
+            print(" Max value - ",copyRoot.data)
 
         
 
