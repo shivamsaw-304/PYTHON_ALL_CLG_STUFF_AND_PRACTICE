@@ -51,27 +51,6 @@ class BST:
 
       
 
-    def postOrder(self,copyNode):
-        if copyNode is None:
-            return
-        else:
-            self.postOrder(copyNode.left)
-            self.postOrder(copyNode.right)
-            print(copyNode.data , end=" ")
-
-    def minValue(self):
-        copyRoot = self.root
-
-        while copyRoot.left:
-            copyRoot = copyRoot.left
-        print("\n Min value - ",copyRoot.data)
-
-    def maxValue(self):
-            copyRoot = self.root
-    
-            while copyRoot.right:
-                copyRoot = copyRoot.right
-            print(" Max value - ",copyRoot.data)
 
         
 
@@ -89,12 +68,6 @@ bst.insertion(Node(65))
 bst.insertion(Node(300))
 
 bst.inOrderTravel(bst.root)
-print()
-bst.postOrder(bst.root)
-print()
-bst.preOrder(bst.root)
 
-bst.minValue()
-bst.maxValue()
 
 
