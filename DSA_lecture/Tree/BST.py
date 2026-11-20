@@ -59,7 +59,13 @@ class BST:
             self.postOrder(copyNode.right)
             print(copyNode.data , end=" ")
 
-  
+    def minValue(self):
+        copyRoot = self.root
+
+        while copyRoot.left:
+            copyRoot = copyRoot.left
+        print("\n Min value - ",copyRoot.data)
+
 
         
 
