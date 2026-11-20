@@ -51,6 +51,15 @@ class BST:
 
       
 
+    def postOrder(self,copyNode):
+        if copyNode is None:
+            return
+        else:
+            self.postOrder(copyNode.left)
+            self.postOrder(copyNode.right)
+            print(copyNode.data , end=" ")
+
+  
 
         
 
