@@ -73,6 +73,23 @@ class BST:
                 copyRoot = copyRoot.right
             print(" Max value - ",copyRoot.data)
 
+
+    def deletionOfNode(self , root , data):
+        if root is None:
+            return
+
+        if data < root.data:
+            root.left = self.deletionOfNode(root.left , data)
+        elif data >  root.data:
+            root.right = self.deletionOfNode(root.right , data)
+        else:
+            if root.left is None:
+                return root.right
+            if root.right is None:
+                return root.left
+             # succesor code 
+        
+
         
 
         
