@@ -40,6 +40,21 @@ class Tree:
                     self.insertionOfNode(copyRoot.right,newNode)
                     return
 
+
+
+
+    def inOrderTravel(self,rootRef):
+         
+
+         if rootRef is None:
+              return
+
+         self.inOrderTravel(rootRef.left)
+         print(f"{rootRef.data} ",end="")
+         self.inOrderTravel(rootRef.right)
+
+         
+
            
         
 
@@ -50,6 +65,8 @@ tr = Tree()
 
 for i in li:
     tr.insertionOfNode(tr.root,Node(i))
+
+tr.inOrderTravel(tr.root)
 
 
         
