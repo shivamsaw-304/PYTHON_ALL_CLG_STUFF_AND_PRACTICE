@@ -19,3 +19,35 @@ else :
     print(f"Energy charge: ₹{bill}")
     print(f"GST (5%): ₹{gst}")
     print(f"Final bill: ₹{total}")
+
+
+# Take the principal, annual interest rate, and tenure in years. Calculate the EMI using EMI = P*r*(1+r)^n / ((1+r)^n - 1), where r is the monthly rate and n is the number of months. Display the result rounded to 2 decimals. Also print the data type of each input.
+
+principleAmt = float(input("enter princi[le amount : "))
+intrestRate = float(input("interest rate : "))
+tenure = int(input("Added tenure of intrest in years : "))
+
+intrestRate = intrestRate / 12 / 100
+
+mont = tenure *  12 
+
+
+emi = principleAmt*intrestRate*(1+intrestRate)**mont / ((1+intrestRate)**mont - 1)
+
+print(f"emi : {emi}")
+
+print(f"data type of amount : {type(principleAmt)}")
+
+print(f"data type of intrest : {type(intrestRate) }")
+
+print(f"data type of intrest :  {type(tenure) }")
+
+
+
+
+
+
+
+
+
+
