@@ -25,7 +25,7 @@ class Tree:
             copyRoot.left = newNode
             return
         
-        if newNode.data >  copyRoot.data and copyRoot.right is None:
+        if newNode.data >=  copyRoot.data and copyRoot.right is None:
             copyRoot.right = newNode
             return
 
@@ -36,7 +36,7 @@ class Tree:
 
 
 
-        if newNode.data >  copyRoot.data and copyRoot.right is not None:
+        if newNode.data >=  copyRoot.data and copyRoot.right is not None:
                     self.insertionOfNode(copyRoot.right,newNode)
                     return
 
