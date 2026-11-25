@@ -90,7 +90,26 @@ class BST:
              # succesor code 
         
 
-        
+
+# search in binary tree - it will have key and diaplay the message the key is present in binary tree
+    def searchNode(self,root , data):
+        temp = root
+
+        if self.root is None:
+            return False
+
+        if temp.data == data:
+            return True
+
+
+        if temp.data > data:
+            self.searchNode(temp.left,data )
+
+        if temp.data < data:
+            self.searchNode(temp.right,data)
+
+
+# level - order travel 
 
         
         
@@ -108,4 +127,8 @@ bst.insertion(Node(300))
 bst.inOrderTravel(bst.root)
 
 
+if bst.searchNode(bst.root ,30):
+    print("values is present ")
+else:
+    print("values is absent ")
 
