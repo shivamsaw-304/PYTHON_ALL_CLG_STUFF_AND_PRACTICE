@@ -16,9 +16,17 @@ arr = [100,101,100,102,1010,100]
 fre = [0] * 4
 
 for i in arr :
-    fre[i-100] += 1 # slide kia index from 100 to 0 visual window backword 
+    fre[i-100] += 1 # slide kia index from 100 to 0 visual window backword (lowerBoiund - upperBound)
 
 for i in fre :
     print(f"")
 
+arr [-4,-2,1,0,-2,1,3,-4]
+
+# constrain -4 <= arrr[i] <= 4 
+
+fre = [0] * 9
+
+for i in arr :
+    fre[i- (-4) ] += 1  # lowerBound constrain fre[i - lowerBoundConstrain / (- lowerBoundConstrain)]
 

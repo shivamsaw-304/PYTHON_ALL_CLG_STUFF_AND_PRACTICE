@@ -53,6 +53,25 @@ class Tree:
          print(f"{rootRef.data} ",end="")
          self.inOrderTravel(rootRef.right)
 
+    def leveOrderTravel(self):
+        rootNode = self.root
+
+        if rootNode is None:
+             print(f"tree is empty ")
+        arr = []
+        count = 0
+        arr.append(rootNode)
+
+        while(count < len(arr)):
+             temp = arr[count]
+             count += 1
+             print(temp.data , end=" ")
+             if temp.left:
+                  arr.append(temp.left)
+             if temp.right :
+                  arr.append(temp.right)
+                
+
          
 
            
@@ -66,7 +85,8 @@ tr = Tree()
 for i in li:
     tr.insertionOfNode(tr.root,Node(i))
 
-tr.inOrderTravel(tr.root)
+# tr.inOrderTravel(tr.root)
+tr.leveOrderTravel()
 
 
         
